@@ -15,4 +15,6 @@ export const structure: StructureResolver = (S) =>
       S.documentTypeListItem("experience").title("Deneyim"),
       S.documentTypeListItem("education").title("Eğitim"),
       S.documentTypeListItem("project").title("Projeler"),
+      S.divider(),
+      S.documentTypeListItem("consultantPeak").title("Lisans Kullanımı"),
     ]);

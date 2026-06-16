@@ -6,6 +6,7 @@ import { project } from "./project";
 import { experience } from "./experience";
 import { education } from "./education";
 import { skillCategory } from "./skillCategory";
+import { consultantPeak } from "./consultantPeak";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -16,5 +17,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     experience,
     education,
     project,
+    consultantPeak,
   ],
 };
