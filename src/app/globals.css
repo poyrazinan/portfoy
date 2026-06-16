@@ -853,6 +853,9 @@ footer {
   .nav-links {
     display: none;
   }
+  .hero-portrait {
+    display: none;
+  }
   .skills-grid {
     grid-template-columns: 1fr;
   }

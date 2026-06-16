@@ -45,7 +45,7 @@ export function Hero({ settings }: { settings: SiteSettings }) {
           </div>
         </Reveal>
 
-        <Reveal>
+        <Reveal className="hero-portrait">
           <div className="portrait-frame">
             <span className="tag">// poyraz.jpg</span>
             {photo ? (

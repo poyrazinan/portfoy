@@ -36,3 +36,4 @@ next-env.d.ts
 sanity.types.ts
 schema.json
 /docs
+/.claude

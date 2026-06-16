@@ -1,0 +1,26 @@
+name: Update GitHub stars
+
+# Ayda bir (her ayın 1'i, 06:00 UTC) Sanity'deki proje star sayılarını
+# GitHub'dan çekip günceller. Elle de tetiklenebilir.
+on:
+  schedule:
+    - cron: "0 6 1 * *"
+  workflow_dispatch:
+
+jobs:
+  update-stars:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Sanity'deki star sayılarını güncelle
+        env:
+          SANITY_PROJECT_ID: ckxe60qx
+          SANITY_DATASET: production
+          SANITY_API_WRITE_TOKEN: ${{ secrets.SANITY_API_WRITE_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/update-stars.mjs
